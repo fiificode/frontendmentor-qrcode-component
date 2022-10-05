@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Colors */
+:root{
+  --white: hsl(0,0%,100%);
+  --light-gray: hsl(212,45%,89%);
+  --grayish-blue: hsl(220,15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--grayish-blue);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  width: 370px;
+  height: auto;
+  margin: auto;
+  margin-top: 10%;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 20px;
+  border: 1px solid var(--white);
+  background-color: var(--white);
+}
+.img-container{
+  width: 100%;
+  flex: 2;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+.img-container img{
+  width: 100%;
+}
+.content{
+  flex: 1;
+  margin: 30px;
+  /* text-align: center; */
+}
+h1{
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin-bottom: 20px;
+}
+p{
+  font-size: 17px;
+  text-align: center;
+  font-weight: 400;
+  color: var(--grayish-blue);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 360px) {
+  .App{
+    width: 320px;
   }
-  to {
-    transform: rotate(360deg);
+  h1{
+    font-size: 20px;
+  } 
+  p{
+    font-size: 15px;
   }
 }
